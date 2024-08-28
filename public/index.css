@@ -1,0 +1,348 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #7a7474;
+  padding: 5px;
+  color: rgb(8, 8, 8);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.heading {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Navigation Styles */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #ddd;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left:40%;
+}
+
+.signuplogin-button, .cart-button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signuplogin-button:hover, .cart-button:hover {
+  background-color: #555;
+}
+
+/* Burger Menu */
+.burger-menu {
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: rgb(5, 5, 5);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.burger-menu:focus {
+  outline: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 200px;
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .auth-buttons {
+    flex-direction:row;
+    align-items: flex-end;
+    margin-top: 10px;
+    margin-left: 20%;
+  }
+
+  .signuplogin-button, .cart-button {
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 5%;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+}
+
+.cart-button img{
+  width: 25px;
+  height: auto;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  top:50px;
+  background: #444;
+  padding: 10px;
+}
+
+.submenu a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.submenu.show {
+  display: block;
+  animation: drop 0.5s ease-out;
+}
+
+@keyframes drop {
+  0% {
+    transform:translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.heroblock{
+  background-image: url('./images/bg2.jpg');
+  background-repeat: no-repeat; /* Prevents repeating */
+  background-size: cover; /* Scales the image to cover the entire container */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Optional: Keeps the background fixed while scrolling */
+  color: white;
+  width: 100%;
+  min-height: 200vh; /* Ensure it fills the viewport height */
+  
+
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.cards-container {
+  
+  padding: 10px;
+  float: left;
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+/* Card Styles */
+.card {
+  background-color: #e0f7fa;
+  border: 2px solid #007bff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effect for Cards */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Card Title */
+.card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+/* Card Descriptions */
+.card p {
+  font-size: 1em;
+  color: #0a0909;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design: Tablet View */
+@media (max-width: 768px) {
+  .card {
+    width: 45%; /* Adjust width for tablets */
+  }
+}
+
+/* Responsive Design: Mobile View */
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* Full-width for mobile */
+    margin-bottom: 20px;
+  }
+}
+
+.card img{
+  width: 100%;
+  height: auto;
+}
+
+.btn-custom {
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #007bff; /* Bootstrap's primary color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #0056b3; /* Darker shade for hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.btn-custom:active {
+  background-color: #004085; /* Even darker shade for active state */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Reduce shadow when pressed */
+  transform: scale(0.98); /* Slightly shrink the button on click */
+}
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 5%;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.footer-section h5 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.footer-section.social-media {
+  margin-left: 50%;
+}
+.footer-section.social-media a img {
+  width: 30px;
+  margin-right: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.footer-section.social-media a:hover img {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #222;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    text-align: center;
+    padding: 20px 0;
+  }
+}
