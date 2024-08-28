@@ -34,7 +34,6 @@ function changetitle(event){
  }
 
   return (
-    
     <form onSubmit={changetitle}>
       <h1 >{text} {username}</h1>
       <input type="text" placeholder='enter your name:'
